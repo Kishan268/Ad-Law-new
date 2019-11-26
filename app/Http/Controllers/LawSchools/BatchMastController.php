@@ -31,7 +31,9 @@ class BatchMastController extends Controller
         ]);
         foreach ($batches as $batch) {         
             if($batch->name == $request->name){
-                return redirect()->back()->with('warning','Batch name is already in records');
+                return back()->withInput()->with('warning','Batch name already in records');
+                 // return redirect()->route('warning','Batch name is already in records');
+
             }
                  
         }    
@@ -55,23 +57,23 @@ class BatchMastController extends Controller
     {
         
         $user_id    = Auth::user()->id;
-        $batches = BatchMast::where('user_id',Auth::user()->id)->get();
-        $data =  $request->validate([
-            'start_date' =>'required',
-            'end_date' =>'required',
+        $batches    = BatchMast::where('user_id',Auth::user()->id)->get();
+        $data       =  $request->validate([
+                    'start_date' =>'required',
+                    'end_date' =>'required',
         ]);
         foreach ($batches as $batch) {
             if($batch->id != $id){
                 if($batch->name == $request->name){
-                    return redirect()->back()->with('warning','Batch name is already in records');
+                    return back()->withInput()->with('warning','Batch name already in records');
                 }
             }        
         }    
 
         $data['name']= $request->name;       
         $data['user_id'] = $user_id;
-       
         $batch = BatchMast::find($id)->update($data);
+
         return redirect()->route('batches.index')->with('success','Batch Updated Successfully');
     }
 

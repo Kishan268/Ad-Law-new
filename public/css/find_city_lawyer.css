@@ -1,0 +1,87 @@
+
+section h2 {
+   font-weight: 300;
+   font-size: 30px;
+   line-height: 36px;
+   color: #000;
+   font-family: inherit;
+    margin-top: 46px;
+}
+.nav-bar .city{
+background: #fff; 
+border-top: 5px solid #2196f3;
+}
+.nav-bar li a{
+  font-size: 19px;
+}
+/* start media query for find lawyer by*/
+@media(max-width: 360px){
+   .tab-pane{
+  margin-top: 15px;
+  font-size: 20px;
+ }
+}
+/*.tabpanel center a{
+  margin-left: 
+}*/
+/* end media query for find lawyer by*/
+/*@media(max-width: 360px){
+  .row .nav-bar .allcity{
+  font-size: 27px;
+}
+}*/
+
+
+
+
+
+
+
+
+
+/***** End For all the headins *****/
+/* .block-container{
+   padding-top: 30px;
+   padding-bottom: 30px;
+}*/ 
+/* .find-lawyers .container {
+   text-align: left;
+      margin-top: 46px;
+} */  
+/*  .find-lawyers .find-lawyers-tab .nav-tabs li.active a{
+   color: #333;
+   border-top: 5px solid #2196f3;
+   border-radius: 0;
+  background: #fff;
+   position: relative;
+   z-index: 9;
+   font-size: 23px; 
+  } */
+/*.find-lawyers .find-lawyers-tab .nav-tabs li a {
+       color: #2196f3;
+       padding-left: 140px; 
+     padding-right: 142px; 
+       padding-top: 10px;
+       padding-bottom: 10px;
+       border-radius: 0;
+      border-top: 1px solid #ddd;
+       border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd; 
+       margin-right: -1px;
+       background: #fafafa;
+           font-size: 23px;
+   }  */
+
+/*  .find-lawyers .find-lawyers-tab .tab-content .tab-pane {
+  border: 1px solid #ddd;
+  padding: 25px 20px 10px;
+   z-index: 2;
+   background: #fff;
+   list-style: none;
+    margin-right: -33px;
+} */
+/*.row a {
+     color: #5e5959;
+     text-decoration: none;
+     background-color: transparent;
+ }*/

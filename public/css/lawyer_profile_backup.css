@@ -1,0 +1,41 @@
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background:#444343;
+    color: #fff;
+   
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+   
+}
+
+ul.components li a span{
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+#Education,#Specialization,#Landmark,#Practicing li a{
+    font-size: 16px;
+    padding: 9px;
+    text-decoration: none;
+}

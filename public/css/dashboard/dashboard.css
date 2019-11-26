@@ -1,0 +1,37 @@
+.bg-c-yellow {
+	background: #ff9061;
+	background: linear-gradient(to right bottom, #ff9061, #ffb99a);
+	
+}
+.bg-c-green {
+	background: #0ac282;
+	background: linear-gradient(to right bottom, #0ac282, #0df3a3);
+	
+}
+.bg-c-pink {
+	background: #fe5d70;
+	background: linear-gradient(to right bottom, #fe5d70, #fe909d);
+}
+.bg-c-lite {
+	background: #01a9ac;
+	background: linear-gradient(to right bottom, #01a9ac, #01dbdf);
+}
+.bg-c-blue {
+	background: #01a9ac;
+	background: linear-gradient(to right bottom, #015adf, #78b4ff);
+}
+.bg-c-sky {
+	background: #01a9ac;
+	background: linear-gradient(to right bottom, #009292, #ff8484);
+}
+.bg-c-voilet {
+	background: #6c757d;
+	background: linear-gradient(to right bottom, #6c757d, rgba(0,123,255,.25));
+}.bg-c-red {
+	background: #01a9ac;
+	background: linear-gradient(to right bottom, #009292, #ff8484);
+}.bg-c-brown {
+	background: #989696;
+	background: linear-gradient(to right bottom, #989696, #2d71d8);
+}
+

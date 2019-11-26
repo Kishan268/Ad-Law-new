@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - composer install
+    - npm install && npm run dev
+    - php artisan cache:clear

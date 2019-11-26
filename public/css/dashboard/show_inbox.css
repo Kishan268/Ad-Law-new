@@ -1,0 +1,126 @@
+
+.btn-block {
+    background-color: #86c042;
+    border-color: #8bc34a;
+    color: #fff; 
+}
+ .btn-block:hover {
+     color: #fff;  
+}
+.text-bold{
+    font-weight: 700;
+ 
+}
+.text-main{
+    color: #2b425b;
+    font-family: "Times new roman";
+
+}
+.text-semibold{
+   font-weight: 600; 
+}
+.icon-lg{
+    font-size: 1.0em;
+
+}
+.icon-fw{
+    width: 1.33em;
+    margin-right: 6px;
+    text-align: center;
+}
+.list-group.bg-trans .list-group-item:not(.active):not(.disabled){
+        /*background-color: transparent;*/
+    border-color: transparent;
+    color: inherit;
+}
+a.list-group-item:hover{
+    color: #555;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+.page-header {
+    font-weight: normal;
+    font-family: "Times new roman";
+}
+
+.btn-group{
+    /*padding: 0px 4px 0px 0px;*/
+    border:1px solid #7b7b7b ;
+}
+.dropdown-item:hover{
+    background-color: #42a5f5;
+    color:#fff;
+}
+
+
+.mail-time{
+    color: #afb9c3;
+    font-size: 85%;
+    text-align: right;
+
+    
+}
+.mail-from-a, .mail-subject-a{
+    color:#758697;
+    font-size:15px;
+    font-weight: bolder;
+}
+.mail-from-a:hover,.mail-subject-a:hover{
+    text-decoration: none;
+    color: #68798a;
+    outline: 0!important;
+}
+@media(max-width: 360px) {
+    .user-date p {
+    text-align: left;
+
+    }
+    .mail-control{
+        float: left;
+        width: 20px;
+        padding: 0px;
+    }
+    .mail-from {
+        width: 110px;
+        float:left; 
+        padding: 0px 1px;
+    /*margin-right: 20px;*/
+    }
+    .mail-subject{
+        width:69px;
+        float:left;
+        padding: 0px 1px;
+    }
+    .mail-time{
+        width:101px;
+        float:left; 
+        padding: 0px; 
+    }
+
+}
+.mail-list-unread:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.label-danger {
+    background-color: #d9534f;
+}
+.label{
+    display: inline;
+padding: .2em .6em .3em;
+font-size: 75%;
+font-weight: 700;
+line-height: 1;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25em;
+}
+
+.active_back{
+    background-color: rgba(0,0,0,.125);
+}
+.mail-from-a:hover{
+    color: #000;
+}

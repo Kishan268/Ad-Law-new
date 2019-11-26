@@ -1,0 +1,80 @@
+
+/* ********* Start inside the slider******* */
+.button-large {
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.button{
+    display: inline-block;
+}
+
+ .button-default {
+    background: #fff;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    font-weight: bold;
+} 
+.button-large.button-primary {
+    border: 1px solid #2196f3;
+}
+
+/********** End inside the slider******* */
+
+
+/* *******Start After Slider portion ******* */
+#main img {
+        height: 57px;
+}
+#main .quick-menu .media:hover .media-body h4, .quick-menu .media:hover .media-body p {
+    color: #337ab7;
+
+}
+#main-quick-menu{
+     border-bottom: 1px solid #cecece;
+     
+}
+.media-body p{
+    font-weight: 400;
+    text-transform: capitalize;
+}
+/* *******End  After Slider portion ****** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .quick-menu .media .media-heading{
+    color: #5e5e5e;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+} 
+ */
+/* .media-body p {
+      color: #5e5e5e;
+      text-decoration: none;
+}
+.media-body .media-heading {
+    display: block;
+   
+}
+ */
+ /* start this is for inside the slider */
+
+/*  end this is for inside the slider */

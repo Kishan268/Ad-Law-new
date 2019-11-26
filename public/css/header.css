@@ -1,0 +1,132 @@
+.logoutmenu a.dropdown-item{
+        color:#000;
+        font-size: 13px;
+        
+}
+.logoutmenu a.dropdown-item:hover{
+    background-color: #efefef;
+}
+.list-inline li {
+    /*display: inline-block;*/
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    list-style: none;
+}
+
+.navbar-right{
+    /*margin-left: auto;*/
+}
+.navbar-light {
+    border-bottom: 1px solid #cecece;
+}
+.navbar-nav>li>a {
+    text-transform: uppercase;
+    padding: 28px 20px 27px;
+    color: #333;
+}  
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}  
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    }
+.nav>li>a {
+    position: relative;
+    display: block;
+    }
+.nav>li>a:hover{
+    background-color:#efefef;
+    border-radius: 20px;
+}
+.dropdown-menu {
+  left: 124px;
+  right: 134px; 
+  margin: auto;
+    } 
+.yamm-content {
+        padding: 20px 30px;
+    }
+.yamm-content ul.list-unstyled li a{
+    color: #333;
+    font-size: 14px;
+}
+.yamm-content ul.list-unstyled li a.button {
+    margin-top: 10px;
+    color: #2196f3;
+    padding: 6px 15px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: 1px solid #2196f3;
+}
+.dropmenu-title {
+    margin-left: 1px;
+    display: -webkit-inline-box;
+    margin-bottom: 3px;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+    color: #2196f2;
+    padding-bottom: 10px;
+} 
+
+li #about li{
+    width:209px;
+   margin-left: 25px;
+   
+}
+li #about li a{
+   color: #333;
+   font-size: 12px;
+}
+#slider_id{
+    background-image: url("../images/banner.jpg");
+    /*height: -webkit-fill-available;*/
+    min-height: 500px;
+}
+#main img {
+        height: 57px;
+}
+#main .quick-menu .media:hover .media-body h4, .quick-menu .media:hover .media-body p {
+    color: #337ab7;
+
+}
+#main .media{
+    text-decoration: none;
+}
+.quick-menu .media .media-heading{
+    color: #5e5e5e;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.media-body p {
+      color: #5e5e5e;
+      text-decoration: none;
+}
+.media-body .media-heading {
+    display: block;
+   
+}
+
+.button-large {
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.button{
+    display: inline-block;
+}
+.button-default {
+    background: #fff;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    font-weight: bold;
+}
+.button-large.button-primary {
+    border: 1px solid #2196f3;
+}

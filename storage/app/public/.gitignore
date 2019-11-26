@@ -1,0 +1,4 @@
+*
+!public/document
+!public/profile_photo
+!.gitignore

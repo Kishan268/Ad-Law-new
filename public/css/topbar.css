@@ -1,0 +1,66 @@
+#heading_lawyer {
+font-family: 'Open Sans',sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 3px;"
+}
+
+@media(max-width: 360px) {
+ .radio-group{
+  display: block!important;
+  }
+  .d-inline-flex{
+    display: block!important;
+  }
+  
+}
+.radio-group{
+    border-radius: 6px;
+    font-size: 15px;
+}
+.active_class , .active_class:hover {
+      background: #efefef;
+      
+  }
+ 
+.menunav li>a:hover{
+  background-color:#efefef;
+
+}
+
+#main img {
+        height: 57px;
+}
+#main .quick-menu .media:hover .media-body h4, .quick-menu .media:hover .media-body p {
+    color: #337ab7;
+}
+
+@media screen and (max-width:360px) {
+  .w3-modal .w3-animate-right {
+    margin-right:13px;
+  }
+
+  #search_field{
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width:360px) {
+   .find{
+    border-bottom: 1px solid #dee2e6!important;
+    margin-bottom: 20px;
+    line-height: 20px;
+
+    border-right:0px solid !important ;
+  }
+  
+}
+
+.navbar ul .dropdown-menu .row .list-unstyled {
+  font-family: "Times New Roman", Times, serif;
+}
+.navbar ul {
+   font-family: "Times New Roman", Times, serif;
+ }
+}
+

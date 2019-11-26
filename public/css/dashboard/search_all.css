@@ -1,0 +1,131 @@
+/* Put your css in here */
+
+.left{
+ float: left; 
+ width: 5%;
+ height: 60px;
+ margin-right:  3px;
+ /*border: 1px solid black;*/
+}
+.left button, .right button{
+	height: 60px;
+}
+.internal{
+ width: 16.75%;
+
+ /*height: 100%;*/
+ /*border: 1px solid black;*/
+ display: inline-block;
+}
+
+.center{
+ float: left; 
+ width: 470px;
+ height: 60px;
+ padding: 5px;
+ margin: 1px;
+ color: #fff;
+ font-weight: 700;
+ overflow: hidden;
+ /*will change this to hidden later to deny scolling to user*/
+ white-space: nowrap;
+}
+.center1{
+ float: left; 
+ width: 479px;
+ height: 35px;
+/* padding: 5px;*/
+ margin: 2px 2px 2px 4px;
+ overflow: hidden;
+ /*will change this to hidden later to deny scolling to user*/
+ white-space: nowrap;
+}
+.internal1{
+
+ width: 23.75%;
+ /*height: 100%;*/
+ /*border: 1px solid black;*/
+ display: inline-block;
+
+}
+.right{
+ float: right; 
+ width: 5%;
+ height: 60px;
+ /*border: 1px solid black;*/
+}
+
+.hideContent {
+	overflow-y: scroll;
+    height: 15em;
+}
+
+@media screen and (max-width: 360px) {
+	/*.right, .left{
+		 width: 9%;
+	}
+	.center{
+		width: 241px;
+	}
+	.center1{
+		width: 295px;
+
+	}
+	.internal1{
+	padding-top:2px ;
+	padding-left:2px ;
+	}
+	.internal{
+		width: 28.75%;
+	}	*/
+
+	#book_desktop{
+		display: none;
+	}
+}
+@media screen and (max-width: 768px) {
+	
+	#book_desktop{
+		display: none;
+	}
+}
+@media screen and (max-width: 640px) {
+	
+	#book_desktop{
+		display: none;
+	}
+}
+/*@media screen and (max-width: 1080px) {
+	
+	#book_desktop{
+		display: none;
+	}
+}*/
+
+@media screen and (max-width: 1024px) {
+	.center{
+		 float: left; 
+		 width: 387px;
+		 height: 60px;
+		 padding: 5px;
+		 margin: 1px;
+		 color: #fff;
+		 font-weight: 700;
+		 overflow: hidden;
+		 /*will change this to hidden later to deny scolling to user*/
+		 white-space: nowrap;
+	}
+	
+
+	.left{
+	 float: left; 
+	 width: 5%;
+	 height: 60px;
+	 margin-right:  6px;
+	 /*border: 1px solid black;*/
+	}
+}
+
+
+
+}

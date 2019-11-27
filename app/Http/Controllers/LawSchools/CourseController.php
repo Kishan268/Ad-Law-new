@@ -9,6 +9,9 @@ use App\User;
 use App\Models\UserQualification;
 use App\Models\CourseMast;
 use App\Models\CollegeCourse;
+use App\Models\QualCatg;
+use App\Models\QualMast;
+
 class CourseController extends Controller
 {
     /**
@@ -19,7 +22,6 @@ class CourseController extends Controller
     public function index()
     {
       $courses = CollegeCourse::with('course')->where('user_id', Auth::user()->id)->get();
-    
       return view('lawschools.dashboard.courses.index',compact('courses'));
     }
 
@@ -30,7 +32,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $courses = CourseMast::all();
+        $courses = QualCatg::all();
+        // dd($courses);
         return view('lawschools.dashboard.courses.create',compact('courses'));
     }
 
@@ -42,16 +45,18 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        $data =  $this->validation($request);
+        
+        
+        $data =  $request->validate(['qual_catg_code'=>'required','qual_code'=>'required','course_duration' =>'required|numeric|min:2|max:60','syllabus'=>'required']);
+  // return $request->';
+        
+        $qualCatgDesc = QualMast::where('qual_code',$request->qual_code)->first();
 
-        $course = CourseMast::find($data['course_code']);
-        $clg = CollegeCourse::where('course_code',$data['course_code'])->where('user_id', Auth::user()->id)->get();
-       // return $clg;
-
-        if(count($clg)!=0){
-            return redirect()->back()->with('warning','Course already inserted');
-        }
-        $data['course_desc'] = $course->course_desc;
+        // if(count($qual_catg_desc)!=0){
+        //     return redirect()->back()->with('warning','Course already inserted');
+        // }
+        $data['qual_catg_desc'] = $qualCatgDesc->qual_catg_desc;
+        $data['qual_desc']  = $qualCatgDesc->qual_desc;
         $data['user_id'] = Auth::user()->id;
 
         CollegeCourse::create($data);
@@ -82,8 +87,10 @@ class CourseController extends Controller
     public function edit($id)
     {
         $data = CollegeCourse::find($id);
-        $courses = CourseMast::all();
-        return view('lawschools.dashboard.courses.edit',compact('data','courses'));
+        $courses = QualCatg::all();
+        $qualCatgDesc = QualMast::where('qual_code',$data->qual_code)->first();
+        $qual_catg_desc = $qualCatgDesc->qual_desc;
+        return view('lawschools.dashboard.courses.edit',compact('data','courses','qual_catg_desc'));
     }
 
     /**
@@ -95,14 +102,19 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $this->validation($request);
-        $course = CourseMast::find($data['course_code']);
-
-        $data['course_desc'] = $course->course_desc;
-
-        $user = CollegeCourse::find($id);
-        $user->update($data);
-        return redirect()->route('course.index')->with('success','Course Updated Successfully');
+        
+        $data =  $request->validate(['qual_catg_code'=>'required','qual_code'=>'required','course_duration'=>'required|numeric|min:2|max:60','syllabus'=>'required']);
+        if($data['qual_catg_code'] != 0){
+            $qualCatgDesc = QualMast::where('qual_code',$request->qual_code)->first();
+            $data['qual_catg_desc'] = $qualCatgDesc->qual_catg_desc;
+            $data['qual_desc']  = $qualCatgDesc->qual_desc;
+            $data['user_id'] = Auth::user()->id;
+            $user = CollegeCourse::find($id);
+            $user->update($data);
+            return redirect()->route('course.index')->with('success','Course Updated Successfully');
+        }else{
+            return redirect()->back()->with('warning','Course already in record');
+        }
     }
 
     /**
@@ -113,7 +125,6 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-       
         CollegeCourse::find($id)->delete();
         return redirect()->route('course.index')->with('success','Course Deleted Successfully');
     }

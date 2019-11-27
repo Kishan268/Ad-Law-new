@@ -9,7 +9,7 @@ class UserTodo extends Model
     protected $table = 'user_todo';
     protected $guarded = [];
    	public $timestamps = false;
-   	public $incrementing =false;
+   	public $incrementing = false;
 
    	public function user(){
  		return $this->belongsTo('App\User','user_id');

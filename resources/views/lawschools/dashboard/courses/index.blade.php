@@ -28,8 +28,8 @@
 						@foreach($courses as $cours)
 						<tr class="row">
 							<td>{{++$count}}</td>
-							<td>{{$cours->course_desc}}</td>
-							<td>{{$cours->course->course_duration}} years</td>
+							<td>{{$cours->qual_desc}}</td>
+							<td>{{$cours->course_duration}} Months</td>
 							<td class="">
 								<form action="{{route('course.destroy',$cours->id)}}" method="POST" id="delform_{{$cours->id}}">
 									@method('DELETE')

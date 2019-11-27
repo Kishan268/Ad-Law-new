@@ -70,6 +70,21 @@
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       }
     });
+     tinymce.init({
+
+            selector: "textarea.tinymce",
+            plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+
+            "   directionality emoticons template paste textcolor"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |  forecolor backcolor ",
+
+            height: 300,
+        });
+
+
+
   });
 </script>
 </body>

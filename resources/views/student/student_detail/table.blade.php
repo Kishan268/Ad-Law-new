@@ -30,7 +30,7 @@
 			<td>
 				{{$student->semester == '1' ? '1st ' : ($student->semester == '2' ? '2nd ' : ($student->semester == '3' ? '3rd ' : ($student->semester == '4' ? '4th' : ($student->semester == '5' ? '5th ' : ($student->semester == '6' ? '6th ' : ($student->semester == '7' ? '7th ' : ($student->semester == '8' ? '8th ' : ($student->semester == '9' ? '9th ' : '10th ' )))))) ))}} 
 			</td>
-			<td>{{$student->batch->name}}</td>
+			{{-- <td>{{$student->batch->name}}</td> --}}
 			<td>
 				<form action="{{route('student_detail.destroy', $student->id)}}" method="POST" id="delform_{{$student->id}}">
 				@method('DELETE')

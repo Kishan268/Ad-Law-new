@@ -5,7 +5,7 @@
 	<div class="col-md-12 m-auto " >
 		<div class="box box-primary">
 			<div class="box-header with-border">
-				<h3 style="margin-top: 10px;">Edit Course <a href="{{route('course.index')}}" class="btn btn-sm btn-info pull-right">Back</a></h3>
+				<h3 style="margin-top: 10px;">Edit Qulification <a href="{{route('course.index')}}" class="btn btn-sm btn-info pull-right">Back</a></h3>
 			</div>
 			<div class="box-body">
 				@if($message = Session::get('warning'))
@@ -18,13 +18,14 @@
 				@method('PATCH')
 					<div class="row form-group ">				
 						<div class="col-md-6" style="margin-top:10px;">	
-							<label for="course_code">Course Name<span class="text-danger">*</span></label>
-							<select name="course_code" class="form-control" id="course_catg">
-								<option value="0">Select course name</option>
+							<label for="qual_code">Qulification Name<span class="text-danger">*</span></label>
+							<select name="qual_catg_code" class="form-control" id="qual_catg_code">
+								<option value="0">{{$data->qual_catg_desc}}</option>
 								@foreach($courses as $course)
-									<option value="{{$course->course_code}}" {{old('course_code') == $course->course_code ? 'selected' : ''}} {{$data->course_code == $course->course_code ? 'selected' : ''}}>{{$course->course_desc}}</option>
+									@foreach($courses as $course)
+			        				<option value="{{$course->qual_catg_code}}" name ="qual_code">{{$course->qual_catg_desc}}</option>
+			        				@endforeach
 								@endforeach
-								
 							</select>
 							@error('course_code')
 			                    <span class="invalid-feedback text-danger" role="alert">
@@ -32,9 +33,29 @@
 			                    </span>
 			                 @enderror
 						</div>
+						<div class="col-md-6" style="margin-top:10px;">	
+							<label for="qual_code">Cource Name<span class="text-danger">*</span></label>
+							<select name="qual_code" class="form-control" id="qual_course">
+								<option>{{$qual_catg_desc}}</option>
+							</select>
+							@error('qual_code')
+			                    <span class="invalid-feedback text-danger" role="alert">
+			                       <strong>{{ $message }}</strong>
+			                    </span>
+			                 @enderror
+						</div>
 					</div>
-					
-						
+					<div class="row form-group">
+			        		<div class="col-md-6 ">
+			        			<label for="course_duration">Course Duration<span class="text-danger">*</span></label>
+			        			<input type="text" name="course_duration" class="form-control" placeholder="Month" value="{{$data->course_duration }}">	
+			        			@error('course_duration')
+			                    <span class="invalid-feedback text-danger" role="alert">
+			                       <strong>{{ $message }}</strong>
+			                    </span>
+			                 @enderror
+			        		</div>
+			        </div>		
 					<div class="row form-group ">
 						<div class="col-sm-12 col-md-12" style="margin-top:10px;">	
 							<label for="username">Syllabus <span class="text-danger" >*</span></label>
@@ -62,9 +83,13 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-
-
-
+	$('#qual_catg_code').on('change',function(e){
+			e.preventDefault();
+			var qual_catg_code = $(this).val();
+			var qual_code = "";
+			qual_course(qual_catg_code,qual_code);
+		
+		});
 		tinymce.init({
 		/* replace textarea having class .tinymce with tinymce editor */
 			selector: "textarea.tinymce",
